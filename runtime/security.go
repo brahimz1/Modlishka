@@ -101,7 +101,6 @@ func IsRejectedDomain(domain string) bool {
 	if err == nil {
 		if isRejectedIP(ip) {
 			log.Warningf("[RP] Illegal IP address found: %s ", domain)
-			log.Warningf("[RP] Working")
 			return true
 		}
 	}
@@ -111,7 +110,6 @@ func IsRejectedDomain(domain string) bool {
 			log.Debugf("[RP] Checking IP: %s ", ip.String())
 			if isRejectedIP(ip) {
 				log.Warningf("[RP] Illegal IP address found: %s ", domain)
-				log.Warningf("[RP] Working")
 				return true
 			}
 		}
